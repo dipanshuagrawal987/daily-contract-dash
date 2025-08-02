@@ -26,7 +26,8 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					glow: 'hsl(var(--primary-glow))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -61,7 +62,26 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				game: {
+					gold: 'hsl(var(--game-gold))',
+					silver: 'hsl(var(--game-silver))',
+					bronze: 'hsl(var(--game-bronze))',
+					success: 'hsl(var(--game-success))',
+					warning: 'hsl(var(--game-warning))',
+					danger: 'hsl(var(--game-danger))'
 				}
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-success': 'var(--gradient-success)',
+				'gradient-gold': 'var(--gradient-gold)',
+				'gradient-magical': 'var(--gradient-magical)'
+			},
+			boxShadow: {
+				'glow': 'var(--shadow-glow)',
+				'gold': 'var(--shadow-gold)',
+				'success': 'var(--shadow-success)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
