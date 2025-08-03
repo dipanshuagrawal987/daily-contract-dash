@@ -36,27 +36,27 @@ export const Timer: React.FC<TimerProps> = ({ initialTime = 0, onStop }) => {
   };
 
   return (
-    <Card className="fixed top-4 right-4 z-50 p-4 bg-card/90 backdrop-blur-sm border-primary/20 animate-fade-in hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
-      <div className="flex items-center gap-3">
-        <div className="text-2xl font-bold text-primary animate-pulse">
+    <Card className="fixed top-2 md:top-4 right-2 md:right-4 z-50 p-2 md:p-4 bg-card/95 backdrop-blur-sm border-primary/20 animate-fade-in hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
+      <div className="flex items-center gap-2 md:gap-3">
+        <div className="text-base md:text-2xl font-bold text-primary animate-pulse">
           {formatTime(time)}
         </div>
-        <div className="flex gap-2">
+        <div className="flex gap-1 md:gap-2">
           <Button
             variant="ghost"
             size="icon"
             onClick={() => setIsRunning(!isRunning)}
-            className="hover:bg-primary/20 hover:scale-110 transition-all duration-200"
+            className="h-8 w-8 md:h-10 md:w-10 hover:bg-primary/20 hover:scale-110 transition-all duration-200 touch-manipulation"
           >
-            {isRunning ? <Pause className="h-4 w-4 animate-pulse" /> : <Play className="h-4 w-4 animate-bounce" />}
+            {isRunning ? <Pause className="h-3 w-3 md:h-4 md:w-4 animate-pulse" /> : <Play className="h-3 w-3 md:h-4 md:w-4 animate-bounce" />}
           </Button>
           <Button
             variant="ghost"
             size="icon"
             onClick={handleStop}
-            className="hover:bg-destructive/20 text-destructive hover:scale-110 transition-all duration-200"
+            className="h-8 w-8 md:h-10 md:w-10 hover:bg-destructive/20 text-destructive hover:scale-110 transition-all duration-200 touch-manipulation"
           >
-            <Square className="h-4 w-4 hover:animate-pulse" />
+            <Square className="h-3 w-3 md:h-4 md:w-4 hover:animate-pulse" />
           </Button>
         </div>
       </div>

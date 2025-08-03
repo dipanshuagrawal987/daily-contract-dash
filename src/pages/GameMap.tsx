@@ -65,19 +65,19 @@ export const GameMap: React.FC = () => {
       <div className="absolute inset-0 bg-background/20" />
       <Timer />
       
-      <div className="relative z-10 p-6">
-        <div className="text-center mb-8">
-          <h1 className="text-4xl font-bold text-white mb-4 drop-shadow-lg">
-            <Crown className="h-10 w-10 inline text-game-gold mr-3" />
+      <div className="relative z-10 p-4 md:p-6 pb-24 md:pb-6">
+        <div className="text-center mb-6 md:mb-8">
+          <h1 className="text-2xl md:text-4xl font-bold text-white mb-4 drop-shadow-lg px-4">
+            <Crown className="h-6 w-6 md:h-10 md:w-10 inline text-game-gold mr-2 md:mr-3" />
             Quest Map
           </h1>
-          <p className="text-xl text-white/90 drop-shadow-md">
+          <p className="text-base md:text-xl text-white/90 drop-shadow-md px-4">
             Navigate your journey and claim rewards!
           </p>
         </div>
 
         {/* Map Container */}
-        <div className="relative max-w-6xl mx-auto h-[600px] rounded-lg overflow-hidden">
+        <div className="relative max-w-6xl mx-auto h-[400px] md:h-[600px] rounded-lg overflow-hidden">
           
           {/* Task Nodes */}
           {tasks.map((task, index) => {
@@ -96,12 +96,12 @@ export const GameMap: React.FC = () => {
                   size="icon"
                   onClick={() => isAccessible && handleTaskClick(index)}
                   disabled={!isAccessible}
-                  className="w-16 h-16 rounded-full text-xl font-bold relative group transform transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/30 animate-pulse"
+                  className="w-12 h-12 md:w-16 md:h-16 rounded-full text-base md:text-xl font-bold relative group transform transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/30 animate-pulse touch-manipulation"
                 >
                   T{index + 1}
                   
-                  {/* Task tooltip */}
-                  <Card className="absolute bottom-20 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 w-48">
+                  {/* Task tooltip - hidden on mobile, shown on desktop */}
+                  <Card className="hidden md:block absolute bottom-20 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 w-48">
                     <CardContent className="p-3 text-sm">
                       <div className="font-semibold">{task.title}</div>
                       <div className="text-muted-foreground">{task.duration} minutes</div>

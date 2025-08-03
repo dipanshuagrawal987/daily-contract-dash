@@ -92,7 +92,7 @@ export const TaskDetail: React.FC = () => {
       />
       <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/70 to-background/90" />
       
-      <div className="relative z-10 min-h-screen p-6 flex items-center justify-center">
+      <div className="relative z-10 min-h-screen p-4 md:p-6 flex items-center justify-center pb-24 md:pb-6">
         <Timer />
       
       <div className="max-w-2xl w-full">
@@ -100,37 +100,37 @@ export const TaskDetail: React.FC = () => {
           // Pre-task screen
           <Card className="text-center backdrop-blur-md bg-card/40 border-primary/30">
             <CardHeader>
-              <CardTitle className="text-3xl font-bold flex items-center justify-center gap-3">
-                <Target className="h-8 w-8 text-primary" />
+              <CardTitle className="text-2xl md:text-3xl font-bold flex items-center justify-center gap-2 md:gap-3">
+                <Target className="h-6 w-6 md:h-8 md:w-8 text-primary" />
                 Task {parseInt(taskIndex!) + 1}
               </CardTitle>
             </CardHeader>
-            <CardContent className="p-8 space-y-6">
-              <div className="text-xl text-muted-foreground">
+            <CardContent className="p-4 md:p-8 space-y-4 md:space-y-6">
+              <div className="text-lg md:text-xl text-muted-foreground">
                 Let's Complete:
               </div>
               
-              <div className="text-2xl font-bold text-foreground p-4 bg-primary/10 rounded-lg">
+              <div className="text-lg md:text-2xl font-bold text-foreground p-3 md:p-4 bg-primary/10 rounded-lg break-words">
                 {task.title}
               </div>
               
-              <div className="grid grid-cols-2 gap-6">
-                <Card className="p-4 bg-accent/10">
-                  <div className="flex items-center justify-center gap-2 mb-2">
-                    <Clock className="h-6 w-6 text-accent" />
-                    <span className="font-semibold">Duration</span>
+              <div className="grid grid-cols-2 gap-3 md:gap-6">
+                <Card className="p-3 md:p-4 bg-accent/10">
+                  <div className="flex items-center justify-center gap-1 md:gap-2 mb-2">
+                    <Clock className="h-4 w-4 md:h-6 md:w-6 text-accent" />
+                    <span className="font-semibold text-sm md:text-base">Duration</span>
                   </div>
-                  <div className="text-2xl font-bold text-accent">
+                  <div className="text-lg md:text-2xl font-bold text-accent">
                     {task.duration} min
                   </div>
                 </Card>
                 
-                <Card className="p-4 bg-game-gold/10">
-                  <div className="flex items-center justify-center gap-2 mb-2">
-                    <Trophy className="h-6 w-6 text-game-gold" />
-                    <span className="font-semibold">Reward</span>
+                <Card className="p-3 md:p-4 bg-game-gold/10">
+                  <div className="flex items-center justify-center gap-1 md:gap-2 mb-2">
+                    <Trophy className="h-4 w-4 md:h-6 md:w-6 text-game-gold" />
+                    <span className="font-semibold text-sm md:text-base">Reward</span>
                   </div>
-                  <div className="text-2xl font-bold text-game-gold">
+                  <div className="text-lg md:text-2xl font-bold text-game-gold">
                     +50 XP
                   </div>
                 </Card>
@@ -161,9 +161,9 @@ export const TaskDetail: React.FC = () => {
                 variant="game"
                 size="xl"
                 onClick={handleReady}
-                className="w-full hover:scale-110 transition-all duration-300 animate-glow hover:shadow-lg hover:shadow-primary/30"
+                className="w-full h-12 md:h-14 text-base md:text-lg hover:scale-105 md:hover:scale-110 transition-all duration-300 animate-glow hover:shadow-lg hover:shadow-primary/30 touch-manipulation"
               >
-                <Zap className="h-6 w-6 mr-3 animate-fire-flicker" />
+                <Zap className="h-5 w-5 md:h-6 md:w-6 mr-2 md:mr-3 animate-fire-flicker" />
                 I'm Ready! Start Timer
               </Button>
             </CardContent>
@@ -176,24 +176,24 @@ export const TaskDetail: React.FC = () => {
                 Task in Progress
               </CardTitle>
             </CardHeader>
-            <CardContent className="p-8 space-y-6">
-              <div className="text-lg text-muted-foreground">
+            <CardContent className="p-4 md:p-8 space-y-4 md:space-y-6">
+              <div className="text-base md:text-lg text-muted-foreground">
                 Current Task:
               </div>
               
-              <div className="text-xl font-bold text-foreground">
+              <div className="text-lg md:text-xl font-bold text-foreground break-words">
                 {task.title}
               </div>
               
               {/* Large Timer Display */}
               <div className="relative">
-                <div className="text-8xl font-bold text-primary mb-4">
+                <div className="text-4xl md:text-8xl font-bold text-primary mb-4">
                   {formatTime(taskTimer)}
                 </div>
                 
                 {/* Progress Ring */}
-                <div className="relative w-48 h-48 mx-auto mb-6">
-                  <svg className="w-48 h-48 transform -rotate-90" viewBox="0 0 100 100">
+                <div className="relative w-32 h-32 md:w-48 md:h-48 mx-auto mb-4 md:mb-6">
+                  <svg className="w-32 h-32 md:w-48 md:h-48 transform -rotate-90" viewBox="0 0 100 100">
                     <circle
                       cx="50"
                       cy="50"
@@ -216,7 +216,7 @@ export const TaskDetail: React.FC = () => {
                     />
                   </svg>
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <Zap className="h-8 w-8 text-primary animate-pulse" />
+                    <Zap className="h-6 w-6 md:h-8 md:w-8 text-primary animate-pulse" />
                   </div>
                 </div>
               </div>
@@ -225,11 +225,11 @@ export const TaskDetail: React.FC = () => {
                 Stay focused! You're doing great!
               </div>
               
-              <div className="flex gap-4">
+              <div className="flex flex-col md:flex-row gap-3 md:gap-4">
                 <Button
                   variant="outline"
                   onClick={handleSkip}
-                  className="flex-1"
+                  className="flex-1 h-12 text-base touch-manipulation"
                 >
                   Skip Task
                 </Button>
@@ -237,7 +237,7 @@ export const TaskDetail: React.FC = () => {
                 <Button
                   variant="success"
                   onClick={handleTaskComplete}
-                  className="flex-1"
+                  className="flex-1 h-12 text-base touch-manipulation"
                 >
                   Complete Early
                 </Button>
