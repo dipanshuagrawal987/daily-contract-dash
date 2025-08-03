@@ -70,7 +70,7 @@ export const TaskInput: React.FC = () => {
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-foreground mb-4 flex items-center justify-center gap-3">
             <Target className="h-10 w-10 text-primary" />
-            Daily Work Contract
+            Unbussy
           </h1>
           <p className="text-xl text-muted-foreground">
             Set your daily tasks and time commitments
