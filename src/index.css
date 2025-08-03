@@ -112,8 +112,7 @@ All colors MUST be HSL.
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
-}
-
+  
   /* Animation Keyframes */
   @keyframes fire-flicker {
     0%, 100% { transform: scale(1) rotate(-1deg); filter: hue-rotate(0deg); }
