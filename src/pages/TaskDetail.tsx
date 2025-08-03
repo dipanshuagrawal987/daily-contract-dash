@@ -82,13 +82,23 @@ export const TaskDetail: React.FC = () => {
   if (!task) return null;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-primary/5 to-accent/10 p-6 flex items-center justify-center">
-      <Timer />
+    <div className="min-h-screen relative overflow-hidden">
+      {/* Gamified Background */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+        style={{
+          backgroundImage: `url('/lovable-uploads/6f066bc5-e86a-4fb9-b263-38d47043a8aa.png')`
+        }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/70 to-background/90" />
+      
+      <div className="relative z-10 min-h-screen p-6 flex items-center justify-center">
+        <Timer />
       
       <div className="max-w-2xl w-full">
         {!isReady ? (
           // Pre-task screen
-          <Card className="text-center backdrop-blur-sm bg-card/90 border-primary/20">
+          <Card className="text-center backdrop-blur-md bg-card/40 border-primary/30">
             <CardHeader>
               <CardTitle className="text-3xl font-bold flex items-center justify-center gap-3">
                 <Target className="h-8 w-8 text-primary" />
@@ -160,7 +170,7 @@ export const TaskDetail: React.FC = () => {
           </Card>
         ) : (
           // Active task screen
-          <Card className="text-center backdrop-blur-sm bg-card/90 border-primary/20">
+          <Card className="text-center backdrop-blur-md bg-card/40 border-primary/30">
             <CardHeader>
               <CardTitle className="text-2xl font-bold text-primary">
                 Task in Progress
@@ -235,6 +245,7 @@ export const TaskDetail: React.FC = () => {
             </CardContent>
           </Card>
         )}
+      </div>
       </div>
       
       <Navigation />

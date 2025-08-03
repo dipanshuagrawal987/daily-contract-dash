@@ -109,7 +109,9 @@ export default {
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fire-flicker': 'fire-flicker 2s ease-in-out infinite',
+				'fire-flicker': 'fire-flicker 1.2s ease-in-out infinite',
+				'fire-dance': 'fire-dance 2s ease-in-out infinite',
+				'ember-float': 'ember-float 3s ease-out infinite',
 				'float': 'float 3s ease-in-out infinite',
 				'glow': 'glow 2s ease-in-out infinite',
 				'shimmer': 'shimmer 2s linear infinite',

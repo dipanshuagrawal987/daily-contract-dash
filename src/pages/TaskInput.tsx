@@ -77,7 +77,7 @@ export const TaskInput: React.FC = () => {
           </p>
         </div>
 
-        <Card className="backdrop-blur-sm bg-card/90 border-primary/20">
+        <Card className="backdrop-blur-md bg-card/30 border-primary/30">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Clock className="h-6 w-6 text-primary" />

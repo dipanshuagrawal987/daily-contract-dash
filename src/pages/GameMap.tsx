@@ -152,7 +152,34 @@ export const GameMap: React.FC = () => {
             </div>
           </div>
 
-          {/* Floating Elements for Ambiance */}
+          {/* Realistic Animated Fire Elements */}
+          <div className="absolute top-1/4 left-1/4">
+            <div className="relative">
+              <div className="w-8 h-12 bg-gradient-to-t from-red-600 via-orange-500 to-yellow-300 rounded-full animate-fire-flicker"></div>
+              <div className="absolute top-0 left-1 w-6 h-10 bg-gradient-to-t from-orange-500 to-yellow-200 rounded-full animate-fire-dance opacity-80"></div>
+              <div className="absolute -top-1 left-2 w-4 h-6 bg-yellow-300 rounded-full animate-fire-flicker opacity-60" style={{ animationDelay: '0.3s' }}></div>
+              <div className="absolute top-2 left-3 w-1 h-1 bg-orange-400 rounded-full animate-ember-float"></div>
+              <div className="absolute top-1 left-1 w-1 h-1 bg-red-400 rounded-full animate-ember-float" style={{ animationDelay: '0.8s' }}></div>
+            </div>
+          </div>
+          <div className="absolute top-3/4 right-1/4">
+            <div className="relative">
+              <div className="w-6 h-10 bg-gradient-to-t from-red-500 via-orange-400 to-yellow-300 rounded-full animate-fire-flicker" style={{ animationDelay: '0.5s' }}></div>
+              <div className="absolute top-0 left-1 w-4 h-8 bg-gradient-to-t from-orange-400 to-yellow-200 rounded-full animate-fire-dance opacity-70" style={{ animationDelay: '0.7s' }}></div>
+              <div className="absolute top-1 left-2 w-1 h-1 bg-yellow-400 rounded-full animate-ember-float" style={{ animationDelay: '0.2s' }}></div>
+            </div>
+          </div>
+          <div className="absolute bottom-1/4 left-1/3">
+            <div className="relative">
+              <div className="w-10 h-16 bg-gradient-to-t from-red-700 via-orange-500 to-yellow-300 rounded-full animate-fire-flicker" style={{ animationDelay: '1s' }}></div>
+              <div className="absolute top-0 left-2 w-6 h-12 bg-gradient-to-t from-orange-500 to-yellow-200 rounded-full animate-fire-dance opacity-75" style={{ animationDelay: '1.2s' }}></div>
+              <div className="absolute top-1 left-3 w-4 h-8 bg-gradient-to-t from-yellow-400 to-yellow-100 rounded-full animate-fire-flicker opacity-50" style={{ animationDelay: '1.5s' }}></div>
+              <div className="absolute top-3 left-4 w-1 h-1 bg-orange-300 rounded-full animate-ember-float" style={{ animationDelay: '0.9s' }}></div>
+              <div className="absolute top-2 left-1 w-1 h-1 bg-red-300 rounded-full animate-ember-float" style={{ animationDelay: '1.3s' }}></div>
+            </div>
+          </div>
+
+          {/* Floating Magical Elements */}
           <div className="absolute top-10 left-10 animate-bounce delay-1000">
             <div className="w-3 h-3 bg-game-gold rounded-full opacity-60 animate-pulse" />
           </div>
