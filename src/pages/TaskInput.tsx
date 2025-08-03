@@ -150,8 +150,9 @@ export const TaskInput: React.FC = () => {
                 variant="game"
                 size="xl"
                 onClick={handleSubmit}
-                className="flex-1"
+                className="flex-1 hover:scale-110 transition-all duration-300 animate-glow hover:shadow-lg hover:shadow-primary/30"
               >
+                <Target className="h-6 w-6 mr-3 animate-bounce" />
                 Start Game Journey!
               </Button>
             </div>

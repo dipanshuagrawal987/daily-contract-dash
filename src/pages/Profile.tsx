@@ -77,7 +77,7 @@ export const Profile: React.FC = () => {
               </div>
               <div className="w-full bg-muted rounded-full h-4">
                 <div 
-                  className="bg-gradient-primary h-4 rounded-full transition-all duration-500"
+                  className="bg-gradient-primary h-4 rounded-full transition-all duration-500 animate-shimmer"
                   style={{ width: `${Math.min(progressToNextLevel, 100)}%` }}
                 />
               </div>
@@ -85,26 +85,26 @@ export const Profile: React.FC = () => {
 
             {/* Stats Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <Card className="p-4 bg-primary/10 text-center">
-                <Trophy className="h-8 w-8 text-game-gold mx-auto mb-2" />
+              <Card className="p-4 bg-primary/10 text-center hover:scale-105 transition-all duration-300 animate-glow">
+                <Trophy className="h-8 w-8 text-game-gold mx-auto mb-2 animate-fire-flicker" />
                 <div className="text-2xl font-bold text-game-gold">{score}</div>
                 <div className="text-sm text-muted-foreground">Total Score</div>
               </Card>
               
-              <Card className="p-4 bg-accent/10 text-center">
-                <Target className="h-8 w-8 text-accent mx-auto mb-2" />
+              <Card className="p-4 bg-accent/10 text-center hover:scale-105 transition-all duration-300 animate-glow">
+                <Target className="h-8 w-8 text-accent mx-auto mb-2 animate-bounce" />
                 <div className="text-2xl font-bold text-accent">{completedTasks}</div>
                 <div className="text-sm text-muted-foreground">Tasks Done</div>
               </Card>
               
-              <Card className="p-4 bg-game-success/10 text-center">
-                <Clock className="h-8 w-8 text-game-success mx-auto mb-2" />
+              <Card className="p-4 bg-game-success/10 text-center hover:scale-105 transition-all duration-300 animate-glow">
+                <Clock className="h-8 w-8 text-game-success mx-auto mb-2 animate-pulse" />
                 <div className="text-2xl font-bold text-game-success">{totalTime}m</div>
                 <div className="text-sm text-muted-foreground">Focus Time</div>
               </Card>
               
-              <Card className="p-4 bg-game-gold/10 text-center">
-                <Star className="h-8 w-8 text-game-gold mx-auto mb-2" />
+              <Card className="p-4 bg-game-gold/10 text-center hover:scale-105 transition-all duration-300 animate-glow">
+                <Star className="h-8 w-8 text-game-gold mx-auto mb-2 animate-pulse" />
                 <div className="text-2xl font-bold text-game-gold">{level}</div>
                 <div className="text-sm text-muted-foreground">Current Level</div>
               </Card>

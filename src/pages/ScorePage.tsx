@@ -41,13 +41,13 @@ export const ScorePage: React.FC = () => {
         
         <CardContent className="p-12 relative z-10">
           <div className={`transform transition-all duration-1000 ${showAnimation ? 'scale-100 opacity-100' : 'scale-50 opacity-0'}`}>
-            <Trophy className="h-24 w-24 text-game-gold mx-auto mb-6 animate-bounce" />
+            <Trophy className="h-24 w-24 text-game-gold mx-auto mb-6 animate-fire-flicker hover:animate-spin transition-all duration-500" />
             
-            <h1 className="text-4xl font-bold text-foreground mb-4">
+            <h1 className="text-4xl font-bold text-foreground mb-4 animate-glow hover:scale-110 transition-transform duration-300">
               Fantastic!
             </h1>
             
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl text-muted-foreground mb-8 animate-float">
               You've set up your daily contract
             </p>
             

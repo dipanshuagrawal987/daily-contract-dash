@@ -151,8 +151,9 @@ export const TaskDetail: React.FC = () => {
                 variant="game"
                 size="xl"
                 onClick={handleReady}
-                className="w-full animate-pulse"
+                className="w-full hover:scale-110 transition-all duration-300 animate-glow hover:shadow-lg hover:shadow-primary/30"
               >
+                <Zap className="h-6 w-6 mr-3 animate-fire-flicker" />
                 I'm Ready! Start Timer
               </Button>
             </CardContent>

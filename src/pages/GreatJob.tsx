@@ -56,17 +56,17 @@ export const GreatJob: React.FC = () => {
         <CardContent className="p-12 relative z-10">
           {/* Main Trophy */}
           <div className="mb-8">
-            <Trophy className="h-32 w-32 text-game-gold mx-auto mb-6 animate-pulse" />
+            <Trophy className="h-32 w-32 text-game-gold mx-auto mb-6 animate-fire-flicker hover:animate-spin transition-all duration-500" />
             
-            <h1 className="text-5xl font-bold text-foreground mb-4 animate-bounce">
+            <h1 className="text-5xl font-bold text-foreground mb-4 animate-glow hover:scale-110 transition-transform duration-300">
               Great Job!
             </h1>
             
-            <div className="text-2xl font-bold text-game-gold mb-2">
+            <div className="text-2xl font-bold text-game-gold mb-2 animate-pulse">
               +30 Bonus Points
             </div>
             
-            <p className="text-xl text-muted-foreground mb-6">
+            <p className="text-xl text-muted-foreground mb-6 animate-float">
               Time to Relax & Recharge
             </p>
           </div>

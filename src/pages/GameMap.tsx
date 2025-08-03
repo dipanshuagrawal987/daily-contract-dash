@@ -96,7 +96,7 @@ export const GameMap: React.FC = () => {
                   size="icon"
                   onClick={() => isAccessible && handleTaskClick(index)}
                   disabled={!isAccessible}
-                  className="w-16 h-16 rounded-full text-xl font-bold relative group"
+                  className="w-16 h-16 rounded-full text-xl font-bold relative group transform transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/30 animate-pulse"
                 >
                   T{index + 1}
                   
@@ -123,7 +123,7 @@ export const GameMap: React.FC = () => {
               <img 
                 src={bonusGift} 
                 alt="Bonus Gift" 
-                className="w-12 h-12 animate-bounce hover:scale-110 transition-transform"
+                className="w-12 h-12 animate-bounce hover:scale-125 transition-all duration-300 hover:rotate-12 filter hover:brightness-110 hover:drop-shadow-lg"
               />
               <Card className="absolute bottom-16 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 w-32">
                 <CardContent className="p-2 text-xs text-center">
@@ -140,7 +140,7 @@ export const GameMap: React.FC = () => {
               <img 
                 src={treasureChest} 
                 alt="Hidden Treasure" 
-                className="w-16 h-16 animate-pulse hover:scale-110 transition-transform"
+                className="w-16 h-16 animate-pulse hover:scale-125 transition-all duration-500 hover:rotate-6 filter hover:brightness-125 hover:drop-shadow-xl hover:hue-rotate-15"
               />
               <Card className="absolute bottom-20 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 w-36">
                 <CardContent className="p-2 text-xs text-center">
@@ -152,33 +152,16 @@ export const GameMap: React.FC = () => {
             </div>
           </div>
 
-          {/* Legend */}
-          <Card className="absolute bottom-4 left-4 bg-card/90 backdrop-blur-sm">
-            <CardContent className="p-4">
-              <h3 className="font-bold mb-2 flex items-center gap-2">
-                <MapPin className="h-4 w-4 text-primary" />
-                Legend
-              </h3>
-              <div className="space-y-2 text-sm">
-                <div className="flex items-center gap-2">
-                  <div className="w-4 h-4 rounded-full bg-gradient-primary" />
-                  <span>Available Task</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-4 h-4 rounded-full bg-gradient-success" />
-                  <span>Completed Task</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Gift className="h-4 w-4 text-accent" />
-                  <span>Bonus Rewards</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <Gem className="h-4 w-4 text-game-gold" />
-                  <span>Hidden Treasures</span>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+          {/* Floating Elements for Ambiance */}
+          <div className="absolute top-10 left-10 animate-bounce delay-1000">
+            <div className="w-3 h-3 bg-game-gold rounded-full opacity-60 animate-pulse" />
+          </div>
+          <div className="absolute top-20 right-20 animate-bounce delay-2000">
+            <div className="w-2 h-2 bg-accent rounded-full opacity-80 animate-pulse" />
+          </div>
+          <div className="absolute bottom-20 left-1/3 animate-bounce delay-500">
+            <div className="w-4 h-4 bg-primary rounded-full opacity-50 animate-pulse" />
+          </div>
         </div>
 
         {/* Progress Bar */}
